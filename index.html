@@ -18,18 +18,24 @@
             
             <a-assets>
                 <img id="mrbudiImage" src="images/venice.jpeg">
-                
-                <video 
-					muted
-					id="elephantVideo" 
-					src="videos/elephants360.mp4"
-					autoplay loop="true"
-				></video>
+                <video
+                    id="elephantvideo"
+                    src="videos/elephants360.mp4"
+                    muted="true" 
+                    autoplay="true"
+                    loop="true"
+                ></video>
             </a-assets>
             
             <a-entity id="homepage" visible="true">
-                <a-sky src="#elephantVideo"></a-sky>
+                <a-sky src="#elephantvideo"></a-sky>
+            </a-entity>
+            
+            <a-entity id="scene2" visible="false">
+                <a-sky src="#mrbudiImage"></a-sky>
             </a-entity>
         </a-scene>
     </body>
 </html>
+
+
