@@ -17,7 +17,9 @@
             </a-entity>
             
             <a-assets>
+                <img id="backbutton-image" src="images/backbutton.png">
                 <img id="mrbudiImage" src="images/venice.jpeg">
+                <img id="venice-sign" src="images/venice-sign.jpg">
                 <video
                     id="elephantvideo"
                     src="videos/elephants360.mp4"
@@ -27,8 +29,31 @@
                 ></video>
             </a-assets>
             
+            <a-entity id="backbuttons" visible="false">
+                <a-image
+                    src="#backbutton-image"
+                    position="-3 1 -3"
+                    rotation="0 30 -4"
+                    onclick="travelToHomepage()"
+                ></a-image>
+                <a-image
+                    src="#backbutton-image"
+                    position="3 1 -2"
+                    rotation="0 -30 -4"
+                    onclick="travelToHomepage()"
+                ></a-image>
+            </a-entity>
+            
             <a-entity id="homepage" visible="true">
                 <a-sky src="#elephantvideo"></a-sky>
+                <a-image
+                    src="#venice-sign"
+                    position="0 3.2 -3"
+                    width=1.5
+                    height=1.5
+                    onclick="travelToVenice()"
+                ></a-image>
+                
             </a-entity>
             
             <a-entity id="scene2" visible="false">
@@ -37,5 +62,3 @@
         </a-scene>
     </body>
 </html>
-
-
